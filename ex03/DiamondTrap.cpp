@@ -30,6 +30,12 @@ DiamondTrap::~DiamondTrap()
 {
 	std::cout << "DiamondTrap destructor called" << std::endl;
 }
+DiamondTrap &DiamondTrap::operator=(const DiamondTrap &cpy)
+{
+	std::cout << "copy assignement operator called" << std::endl;
+	this->setName(cpy.getName());
+	return *this;
+}
 
 void DiamondTrap::whoAmI()
 {

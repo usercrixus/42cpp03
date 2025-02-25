@@ -2,11 +2,12 @@ OBJ = \
 		ClapTrap.o \
 		ScavTrap.o \
 		FragTrap.o \
+		DiamondTrap.o \
 		main.o \
 
-all: scavtrap
+all: diamond
 
-scavtrap: $(OBJ)
+diamond: $(OBJ)
 	c++ $^ -o $@
 
 %.o: %.cpp
@@ -16,7 +17,7 @@ clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f scavtrap
+	rm -f diamond
 
 re: fclean all
 

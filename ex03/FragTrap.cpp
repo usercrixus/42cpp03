@@ -30,6 +30,7 @@ FragTrap &FragTrap::operator=(FragTrap &cpy)
 {
 	this->setName(cpy.getName());
 	std::cout << "FragTrap assignement operator called" << std::endl;
+	return *this;
 }
 
 void FragTrap::attack(const std::string &target)
